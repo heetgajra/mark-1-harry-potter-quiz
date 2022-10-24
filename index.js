@@ -19,6 +19,15 @@ function game(question,answer){
   console.log("                ")
 }
 
+var userAnswerName = readlineSync.question("is your name " + 
+ userName + "? ")
+if(userAnswerName === "yes"){
+  console.log("enter friend " + userName)
+  
+} else{
+  console.log("reaveal your name ! come back when you are ready to show yourself ! ")
+  exit()
+}
 
 var questions =[{
   question: " In what house did the Sorting Hat almost put Harry ? ",
@@ -50,5 +59,5 @@ for (var i=0; i< questions.length; i++){
 }
 console.log(" you achieved a score of ", score)
 console.log("_______________")
-console.log("you made a high score! ", score)
+console.log("congrats !", userName ,"made a high score! of", score, "send a screenshot to get your name added to the highscore list !")
 console.log("_______________")
